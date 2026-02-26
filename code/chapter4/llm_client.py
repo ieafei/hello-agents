@@ -43,9 +43,9 @@ class HelloAgentsLLM:
             collected_content = []
             for chunk in response:
                 content = chunk.choices[0].delta.content or ""
-                print(content, end="", flush=True)
+                # print(content, end="", flush=True)
                 collected_content.append(content)
-            print()  # 在流式输出结束后换行
+            # print()  # 在流式输出结束后换行
             return "".join(collected_content)
 
         except Exception as e:
