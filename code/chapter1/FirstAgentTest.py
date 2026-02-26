@@ -30,9 +30,9 @@ def get_weather(city: str) -> str:
     """
     通过调用 WeatherAPI 查询真实的天气信息。
     """
-    api_key='YOUR_API_KEY'
+    weather_api_key='YOUR_API_KEY'
     # API端点，我们请求JSON格式的数据
-    url = f"https://api.weatherapi.com/v1/current.json?key={api_key}&q={city}&aqi=no"
+    url = f"https://api.weatherapi.com/v1/current.json?key={weather_api_key}&q={city}&aqi=no"
     
     try:
         # 发起网络请求
